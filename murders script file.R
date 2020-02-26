@@ -18,5 +18,6 @@ filter(murders, rank <= 5)
 my_states <- filter(murders, (region == "Northeast" | region == "West") & rate < 10)
 select(my_states, state, rate)
 
-#why isn't this saving? 
+lowestmurders <- filter(murders, rank <= 5)
+lowestmurders %>% dplyr::select(state, rate)
 
