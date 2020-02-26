@@ -18,7 +18,12 @@ filter(murders, rank <= 5)
 my_states <- filter(murders, (region == "Northeast" | region == "West") & rate < 10)
 select(my_states, state, rate)
 
+<<<<<<< HEAD
+lowestmurders <- filter(murders, rank <= 5)
+lowestmurders %>% dplyr::select(state, rate)
+=======
 murders %>% ggplot() + geom_point(aes(population/10^6, rate), size=2) + 
   geom_text(aes(population/10^6, rate, label=abb), nudge_x=1.5)
+>>>>>>> ab026e4527cb57be68c1f8715e3b67283ab70b2e
 
 murders %>% ggplot(aes(rate)) + geom_density(fill="blue")
